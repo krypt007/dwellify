@@ -23,11 +23,11 @@ const Home = () => {
          {/** Main Section */}
         <div className="flex flex-col object-fill p-3 gap-5">
             <div><Search /></div>
-            <div className="flex gap-2 p-1 border border-gray-300 justify-between">
-                <div>House</div>
-                <div>Appartment</div>
-                <div>Office</div>
-                <div>Land</div>
+            <div className="flex gap-2 p-1 justify-between">
+                <div className=" border border-gray-300 p-1 rounded-md">House</div>
+                <div className=" border border-gray-300 p-1 rounded-md">Appartment</div>
+                <div className=" border border-gray-300 p-1 rounded-md">Office</div>
+                <div className=" border border-gray-300 p-1 rounded-md">Land</div>
             </div>
             <div className="flex flex-col">
                 <Card>
