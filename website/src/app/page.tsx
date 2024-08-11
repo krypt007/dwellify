@@ -18,9 +18,9 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="flex flex-col min-h-screen justify-between bg-orange-300/40">
+    <div className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="flex min-[100vh] flex-col items-center justify-between p-24">
+      <main className="flex flex-col items-center justify-between p-24">
       {showFirstComponent ? <SplashScreen /> : <Hero />}
       </main>
       
