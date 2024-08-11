@@ -38,7 +38,7 @@ const Hero = () => {
         {/** Bottom Text */}
         <div className='flex flex-col items-center'>
             <div className='rounded-sm bg-yellow-200/40 py-2 px-4 '>
-                <Link href={"/signup"}><Button>Get Started</Button></Link>
+                <Link href={"/login"}><Button>Get Started</Button></Link>
             </div>
             <div className='flex text-sm gap-2'>
                 Already have an account? 
