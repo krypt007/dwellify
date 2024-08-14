@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="flex flex-col items-center justify-between p-24">
+      <main className="flex flex-col items-center justify-between">
       {showFirstComponent ? <SplashScreen /> : <Hero />}
       </main>
       
