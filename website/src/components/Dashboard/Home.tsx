@@ -4,16 +4,18 @@ import { Button } from "../ui/button";
 import Search from "./Search";
 import { Card, CardContent } from "../ui/card";
 import Image from "next/image";
+import Header from "../Header";
 
 const Home = () => {
     const {disconnect} = useDisconnect();
     const account = useActiveAccount();
     const connectedWallet = useActiveWallet();
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex flex-col justify-between bg-purple-950 px-5">
+
         {/** Header */}
-        <div className="flex justify-between p-2">
-            <div className="flex flex-col">
+        <div className="fixed w-full top-0 left-0 z-50 transition-all flex justify-between p-2 bg-[#9003fc]">
+            <div className="flex flex-col text-white">
                 <div>Hello</div>
                 <div className="font-bold text-sm">A.N. OTHER</div>
             </div>
@@ -21,13 +23,13 @@ const Home = () => {
         </div>
 
          {/** Main Section */}
-        <div className="flex flex-col object-fill p-3 gap-5">
+        <div className="flex flex-col object-fill p-3 gap-5 mt-20">
             <div><Search /></div>
-            <div className="flex gap-2 p-1 justify-between">
-                <div className=" border border-gray-300 p-1 rounded-md">House</div>
-                <div className=" border border-gray-300 p-1 rounded-md">Appartment</div>
-                <div className=" border border-gray-300 p-1 rounded-md">Office</div>
-                <div className=" border border-gray-300 p-1 rounded-md">Land</div>
+            <div className="flex gap-2 p-1 justify-between text-white ">
+                <div className=" border border-gray-300 p-1 rounded-md hover:cursor-pointer">House</div>
+                <div className=" border border-gray-300 p-1 rounded-md hover:cursor-pointer">Appartment</div>
+                <div className=" border border-gray-300 p-1 rounded-md hover:cursor-pointer">Office</div>
+                <div className=" border border-gray-300 p-1 rounded-md hover:cursor-pointer">Land</div>
             </div>
             <div className="flex flex-col">
                 <Card>

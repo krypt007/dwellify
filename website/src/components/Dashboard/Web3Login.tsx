@@ -55,11 +55,11 @@ export default function Web3Login() {
                 factoryAddress: process.env.NEXT_PUBLIC_BSC_TESTNET_FACTORY_ADDRESS as string,
                 gasless: true,
               }}
-              theme={"light"}
+              theme={"dark"}
               connectButton={{ label: "Login" }}
               connectModal={{ size: "compact", title: "Login", }}
           />
-            <div className='flex w-full justify-center'>
+            <div className='flex w-full justify-center object-fill'>
             <p className="text-xs text-white ">By continuing you agree to our <Link href="/terms-and-conditions"><p className="text-yellow-600">Terms & Conditions</p></Link> and <Link href="/privacy-policy"><p className="text-yellow-600">Privacy Policy</p></Link>.</p>
             </div>
           </div>
