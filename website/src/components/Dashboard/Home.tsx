@@ -32,30 +32,30 @@ const Home = () => {
                 <div className=" border border-gray-300 p-1 rounded-md hover:cursor-pointer">Land</div>
             </div>
             <div className="flex flex-col">
-                <Card>
-                    <CardContent className="w-100">
+                <Card className="text-white bg-slate-900 p-2">
+                    <CardContent className="w-100 rounded-md">
                         <Image src="/images/house1.png"
                         alt='welcom'
                         width={800}
                         height={300}
                         />
                     </CardContent>
-                    <CardContent>5 Bedroom House</CardContent>
-                    <CardContent>Westlands, Nairobi</CardContent>
+                    <CardContent className="font-bold">5 Bedroom House</CardContent>
+                    <CardContent className="text-sm">Westlands, Nairobi</CardContent>
                     <CardContent>Ksh. 40,350,000/-</CardContent>
                 </Card>
             </div>
             <div className="flex flex-col">
-                <Card>
-                    <CardContent className="w-100">
-                        <Image src="/images/house2.png"
+                <Card className="text-white bg-slate-900 p-2">
+                    <CardContent className="w-100 rounded-md object-contain">
+                        <Image src="/images/house1.png"
                         alt='welcom'
                         width={800}
                         height={300}
                         />
                     </CardContent>
-                    <CardContent>5 Bedroom House</CardContent>
-                    <CardContent>Westlands, Nairobi</CardContent>
+                    <CardContent className="font-bold">5 Bedroom House</CardContent>
+                    <CardContent className="text-sm">Westlands, Nairobi</CardContent>
                     <CardContent>Ksh. 40,350,000/-</CardContent>
                 </Card>
             </div>
