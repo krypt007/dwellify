@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className="bg-[url('/images/hero_bg.jpeg')] bg-cover bg-center h-[100vh] w-screen flex flex-col items-center justify-center overflow-hidden">
         {/* <Header /> */}
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center bg-[#9003fc]'>
             <Image
             src="/logo.png"
             height={1000}
@@ -32,11 +32,11 @@ const Hero = () => {
         {/** Bottom Text */}
         <div className='flex flex-col items-center'>
             <div className='rounded-sm bg-yellow-200/40 py-2 px-4 '>
-                <Link href={"/login"}><Button>Get Started</Button></Link>
+                <Link href={"/dashboard"}><Button>Get Started</Button></Link>
             </div>
             <div className='flex text-sm text-white gap-2'>
                 Already have an account? 
-                <Link href={"/login"}><div className='text-yellow-800'>Login</div></Link>                
+                <Link href={"/dashboard"}><div className='text-yellow-800'>Login</div></Link>                
             </div>
         </div>
 

@@ -32,7 +32,7 @@ const HomePage = () => {
             <Features />
         </div>
         <div className='flex w-screen object-fill items-center justify-center p-5'>
-            <Link href='/login'><div className='flex bg-[#9003fc] rounded-xl px-3 py-2 text-white'>Get Started Now!</div></Link>
+            <Link href='/dashboard'><div className='flex bg-[#9003fc] rounded-xl px-3 py-2 text-white'>Get Started Now!</div></Link>
         </div>
 
     </div>

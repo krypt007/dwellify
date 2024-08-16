@@ -27,9 +27,9 @@ const wallets = [
 
 export default function Web3Login() {
   return (
-    <div  className="bg-[url('/images/login_bg.jpeg')] bg-cover bg-center h-screen flex items-center justify-center">
+    <div  className="bg-[url('/images/hero_bg.jpeg')] bg-cover bg-center h-screen flex items-center justify-center">
       <div className="min-h-screen flex flex-col items-center justify-between">
-        <Header />
+        {/* <Header /> */}
         <div className='text-yellow-700 text-xl mb-32'>
           <Image
             src="/logo.png"

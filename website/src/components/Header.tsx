@@ -70,7 +70,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className='flex text-white gap-2'>
-            <Link href={"/login"}><div  className='text-purple-950 font-normal px-2 py-1 rounded-lg bg-white hover:bg-black hover:text-white'>Login</div></Link>                
+            <Link href={"/dashboard"}><div  className='text-purple-950 font-normal px-2 py-1 rounded-lg bg-white hover:bg-black hover:text-white'>Login</div></Link>                
         </div>
       </div>
     </header>
