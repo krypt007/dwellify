@@ -7,7 +7,7 @@ import Features from './Features'
 const HomePage = () => {
   return (
     <div className='flex flex-col w-screen mt-16 items-center justify-center overflow-scroll'>
-        <div className='flex w-screen object-fill items-center bg-[#9003fc] p-5'>
+        <div className='flex flex-col md:flex-row w-screen object-fill items-center bg-[#9003fc] p-5'>
             <div className='flex w-screen object-fill items-center justify-center'>
                 <div className='flex flex-col w-[60vh] object-fill'>
                     <div className='text-white font-bold text-lg p-2'>
@@ -22,7 +22,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex w-[50vh] justify-start'>
+            <div className='flex w-[50vh] justify-start px-8 md:px-0'>
                 <Button>
                     Explore Properties
                 </Button>

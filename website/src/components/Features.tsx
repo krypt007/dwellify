@@ -4,8 +4,8 @@ import { Button } from './ui/button'
 
 const Features = () => {
   return (
-    <div className='flex bg-purple-100 w-screen justify-center p-3'>
-        <div className='flex w-[40%]'>
+    <div className='flex flex-col md:flex-row bg-purple-100 w-screen justify-center p-3'>
+        <div className='flex w-screen md:w-[40%]'>
             <Image
                 src="/images/features.jpg"
                 height={1000}
@@ -15,7 +15,7 @@ const Features = () => {
             />
         </div>
 
-        <div className='flex flex-col w-[40%] items-start justify-start p-2 gap-3'>
+        <div className='flex w-screen flex-col md:w-[40%] items-start justify-start p-2 gap-3 overflow-x-clip'>
             <div className='flex flex-col items-start justify-start p-5'>
                 <p className='text-[#9003fc]  text-2xl text-left'>Core Features</p>
                 <p className='text-black font-bold  text-lg text-left'>What makes Dwelify different.</p>
