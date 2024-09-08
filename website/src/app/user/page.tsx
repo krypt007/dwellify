@@ -8,7 +8,6 @@ const User = () => {
     <div className='flex h-screen w-full justify-start items-start'>
         <Appbar>
             <SignInPanel />
-            <Button type='submit'>Login</Button>
         </Appbar>
     </div>
   )

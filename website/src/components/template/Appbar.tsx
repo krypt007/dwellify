@@ -29,7 +29,7 @@ const Appbar = ({ children }: Props) => {
         <NavbarBrand>
           <Link
             href={"/"}
-            className="flex items-center text-primary-400 hover:text-primary-600 transition-colors"
+            className="flex items-center text-white hover:text-slate-300 transition-colors"
           >
             <HomeModernIcon className="w-16" />
             <p className="font-bold text-inherit">Dwelify</p>
