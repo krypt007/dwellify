@@ -20,7 +20,7 @@ interface Props {
 const Appbar = ({ children }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   return (
-    <Navbar className="shadow-md" onMenuOpenChange={setIsMenuOpen}>
+    <Navbar className="shadow-md bg-[#9003fc]" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -32,7 +32,7 @@ const Appbar = ({ children }: Props) => {
             className="flex items-center text-primary-400 hover:text-primary-600 transition-colors"
           >
             <HomeModernIcon className="w-16" />
-            <p className="font-bold text-inherit">Sk Real Estate</p>
+            <p className="font-bold text-inherit">Dwelify</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
