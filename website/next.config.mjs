@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    serverExternalPackages: ['sequelize', 'pino', 'pino-pretty'],
+};
 
 export default nextConfig;
