@@ -1,5 +1,5 @@
 'use client'
-import { useActiveAccount, useActiveWallet, useDisconnect } from "thirdweb/react";
+// import { useActiveAccount, useActiveWallet, useDisconnect } from "thirdweb/react";
 import { Button } from "../ui/button";
 import Search from "./Search";
 import { Card, CardContent } from "../ui/card";
@@ -7,9 +7,9 @@ import Image from "next/image";
 import Header from "../Header";
 
 const Home = () => {
-    const {disconnect} = useDisconnect();
-    const account = useActiveAccount();
-    const connectedWallet = useActiveWallet();
+    // const {disconnect} = useDisconnect();
+    // const account = useActiveAccount();
+    // const connectedWallet = useActiveWallet();
   return (
     <div className="flex flex-col justify-between bg-purple-50 px-5">
 
@@ -19,7 +19,10 @@ const Home = () => {
                 <div>Hello</div>
                 <div className="font-bold text-sm">A.N. OTHER</div>
             </div>
-            <Button onClick={()=> {disconnect(connectedWallet!)}}>Logout</Button>
+            <Button onClick={()=> {
+                // disconnect(connectedWallet!)
+
+            }}>Logout</Button>
         </div>
 
          {/** Main Section */}
