@@ -4,28 +4,28 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const { getUser } = await getKindeServerSession();
-  // const user = await getUser();
+  const user = await getUser();
 
-  // if (!user || user === null || !user.id)
-  //   throw new Error("Something went wrong with authentication" + user);
+  if (!user || user === null || !user.id)
+    throw new Error("Something went wrong with authentication" + user);
 
   // const dbUser = await prisma.user.findUnique({
   //   where: {
-  //     id: user.id,
+  //     id: user?.id,
   //   },
   // });
 
   // if (!dbUser) {
   //   await prisma.user.create({
   //     data: {
-  //       id: user.id,
-  //       firstName: user.given_name ?? "",
-  //       lastName: user.family_name ?? "",
-  //       email: user.email ?? "",
+  //       id: user?.id || "",
+  //       firstName: user?.given_name ?? "",
+  //       lastName: user?.family_name ?? "",
+  //       email: user?.email ?? "",
   //     },
   //   });
 
-  //   return NextResponse.redirect("http://localhost:3000/");
+  //   return NextResponse.redirect("http://localhost:3001/user");
   // }
-  return NextResponse.json({ success: true });
+  return NextResponse.redirect("http://localhost:3001/user");
 }

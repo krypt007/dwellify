@@ -8,6 +8,7 @@ import { Button } from "@nextui-org/react";
 import React from "react";
 import UserProfilePanel from "./UserProfilePanel";
 import prisma from "@/lib/prisma";
+import { Card } from "../ui/card";
 
 const signInPanel = async () => {
   const { isAuthenticated, getUser } = await getKindeServerSession();
@@ -21,6 +22,8 @@ const signInPanel = async () => {
 
   //   return <>{dbUser!! && <UserProfilePanel user={dbUser} />}</>;
   // }
+  const user = await getUser();
+  if(await isAuthenticated()) return <LogoutLink><Button>Logout: {user?.given_name}</Button></LogoutLink>
 
   return (
     <div className="flex gap-3">
