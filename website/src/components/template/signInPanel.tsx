@@ -12,18 +12,18 @@ import { Card } from "../ui/card";
 
 const signInPanel = async () => {
   const { isAuthenticated, getUser } = await getKindeServerSession();
-  // if (await isAuthenticated()) {
-  //   const user = await getUser();
-  //   const dbUser = await prisma.user.findUnique({
-  //     where: {
-  //       id: user?.id,
-  //     },
-  //   });
+  if (await isAuthenticated()) {
+    const user = await getUser();
+    const dbUser = await prisma.user.findUnique({
+      where: {
+        id: user?.id,
+      },
+    });
 
-  //   return <>{dbUser!! && <UserProfilePanel user={dbUser} />}</>;
-  // }
-  const user = await getUser();
-  if(await isAuthenticated()) return <LogoutLink><Button>Logout: {user?.given_name}</Button></LogoutLink>
+    return <>{dbUser!! && <UserProfilePanel user={dbUser} />}</>;
+  }
+  // const user = await getUser();
+  // if(await isAuthenticated()) return <LogoutLink><Button>Logout: {user?.given_name}</Button></LogoutLink>
 
   return (
     <div className="flex gap-3">
