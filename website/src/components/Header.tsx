@@ -1,9 +1,12 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import {UserButton, useUser} from '@clerk/nextjs'
+import { Button } from '@nextui-org/react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const {user, isSignedIn} = useUser();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +73,8 @@ const Header = () => {
           </ul>
         </nav>
         <div className='flex text-white gap-2'>
-            <Link href={"/dashboard"}><div  className='text-purple-950 font-normal px-2 py-1 rounded-lg bg-white hover:bg-black hover:text-white'>Login</div></Link>                
+            {/* <Link href={"/dashboard"}><div  className='text-purple-950 font-normal px-2 py-1 rounded-lg bg-white hover:bg-black hover:text-white'>Login</div></Link>                 */}
+            {isSignedIn? <UserButton /> : <div  className='text-purple-950 font-normal px-2 py-1 rounded-lg bg-white hover:bg-black hover:text-white'>Login</div>}
         </div>
       </div>
     </header>
