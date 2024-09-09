@@ -1,7 +1,7 @@
-import prisma from "@/lib/prisma";
-import Image from "next/image";
-import PropertyCard from "@/components/template/PropertyCard";
-import PropertyContainer from "@/components/template/PropertyContainer";
+// import prisma from "@/lib/prisma";
+// import Image from "next/image";
+// import PropertyCard from "@/components/template/PropertyCard";
+// import PropertyContainer from "@/components/template/PropertyContainer";
 import Search from "@/components/template/Search";
 import Header from "@/components/Header";
 const PAGE_SIZE = 8;
@@ -10,8 +10,8 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 export default async function Home({ searchParams }: Props) {
-  const pagenum = searchParams.pagenum ?? 0;
-  const query = searchParams.query ?? "";
+  // const pagenum = searchParams.pagenum ?? 0;
+  // const query = searchParams.query ?? "";
   // const propertiesPromise = prisma.property.findMany({
   //   select: {
   //     id: true,

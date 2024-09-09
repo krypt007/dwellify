@@ -1,5 +1,5 @@
-import { ImagesSlider } from "@/components/template/ImageSlider";
-import PageTitle from "@/components/template/pageTitle";
+// import { ImagesSlider } from "@/components/template/ImageSlider";
+// import PageTitle from "@/components/template/pageTitle";
 // import prisma from "@/lib/prisma";
 // import { Card } from "@nextui-org/react";
 // import { notFound } from "next/navigation";
@@ -26,7 +26,7 @@ const PropertyPage = async ({ params }: Props) => {
   // if (!property) return notFound();
   return (
     <div>
-      <PageTitle title="Property Page" href="/buy" linkCaption="Back to Properties" />
+      {/* <PageTitle title="Property Page" href="/buy" linkCaption="Back to Properties" /> */}
       {/* <div className="p-4">
         <h2 className="text-2xl font-bold text-primary my-5">{property.name}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -64,16 +64,16 @@ const PropertyPage = async ({ params }: Props) => {
 
 export default PropertyPage;
 
-const Title = ({ title, className }: { title: string; className?: string }) => (
-  <div className={className}>
-    <h2 className="text-xl font-bold text-slate-700">{title} </h2>
-    <hr className="boreder border-solid border-slate-300" />
-  </div>
-);
+// const Title = ({ title, className }: { title: string; className?: string }) => (
+//   <div className={className}>
+//     <h2 className="text-xl font-bold text-slate-700">{title} </h2>
+//     <hr className="boreder border-solid border-slate-300" />
+//   </div>
+// );
 
-const Attribute = ({ label, value }: { label: string; value?: string | number }) => (
-  <div className="flex justify-between">
-    <span className="text-sm text-slate-600">{label}</span>
-    <span className="text-sm text-slate-600">{value}</span>
-  </div>
-);
+// const Attribute = ({ label, value }: { label: string; value?: string | number }) => (
+//   <div className="flex justify-between">
+//     <span className="text-sm text-slate-600">{label}</span>
+//     <span className="text-sm text-slate-600">{value}</span>
+//   </div>
+// );
