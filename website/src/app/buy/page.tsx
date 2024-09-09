@@ -12,60 +12,60 @@ interface Props {
 export default async function Home({ searchParams }: Props) {
   const pagenum = searchParams.pagenum ?? 0;
   const query = searchParams.query ?? "";
-  const propertiesPromise = prisma.property.findMany({
-    select: {
-      id: true,
-      name: true,
-      price: true,
-      images: {
-        select: {
-          url: true,
-        },
-      },
-      location: {
-        select: {
-          city: true,
-          state: true,
-        },
-      },
-    },
-    ...(!!query && {
-      where: {
-        name: {
-          contains: String(query),
-        },
-      },
-    }),
-    skip: +pagenum * PAGE_SIZE,
-    take: PAGE_SIZE,
-  });
-  const totalPropertiesPromise = prisma.property.count({
-    ...(!!query && {
-      where: {
-        name: {
-          contains: String(query),
-        },
-      },
-    }),
-  });
+  // const propertiesPromise = prisma.property.findMany({
+  //   select: {
+  //     id: true,
+  //     name: true,
+  //     price: true,
+  //     images: {
+  //       select: {
+  //         url: true,
+  //       },
+  //     },
+  //     location: {
+  //       select: {
+  //         city: true,
+  //         state: true,
+  //       },
+  //     },
+  //   },
+  //   ...(!!query && {
+  //     where: {
+  //       name: {
+  //         contains: String(query),
+  //       },
+  //     },
+  //   }),
+  //   skip: +pagenum * PAGE_SIZE,
+  //   take: PAGE_SIZE,
+  // });
+  // const totalPropertiesPromise = prisma.property.count({
+  //   ...(!!query && {
+  //     where: {
+  //       name: {
+  //         contains: String(query),
+  //       },
+  //     },
+  //   }),
+  // });
 
-  const [properties, totalProperties] = await Promise.all([
-    propertiesPromise,
-    totalPropertiesPromise,
-  ]);
+  // const [properties, totalProperties] = await Promise.all([
+  //   propertiesPromise,
+  //   totalPropertiesPromise,
+  // ]);
 
-  const totalPages = Math.floor(totalProperties / PAGE_SIZE);
+  // const totalPages = Math.floor(totalProperties / PAGE_SIZE);
 
   return (
     <div>
       <Header />
       <div className="flex h-16 py-3" />
       <Search />
-      <PropertyContainer totalPages={totalPages} currentPage={+pagenum}>
+      {/* <PropertyContainer totalPages={totalPages} currentPage={+pagenum}>
         {properties.map((propertyItem) => (
           <PropertyCard property={propertyItem} key={propertyItem.id} />
         ))}
-      </PropertyContainer>
+      </PropertyContainer> */}
     </div>
   );
 }
