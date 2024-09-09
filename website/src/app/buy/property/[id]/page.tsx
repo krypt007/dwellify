@@ -1,8 +1,8 @@
 import { ImagesSlider } from "@/components/template/ImageSlider";
 import PageTitle from "@/components/template/pageTitle";
-import prisma from "@/lib/prisma";
-import { Card } from "@nextui-org/react";
-import { notFound } from "next/navigation";
+// import prisma from "@/lib/prisma";
+// import { Card } from "@nextui-org/react";
+// import { notFound } from "next/navigation";
 const images = [1, 2, 3, 4, 5, 6].map((image) => `/images/${image}.jpg`);
 interface Props {
   params: {
@@ -11,23 +11,23 @@ interface Props {
 }
 
 const PropertyPage = async ({ params }: Props) => {
-  const property = await prisma.property.findUnique({
-    where: {
-      id: +params.id,
-    },
-    include: {
-      status: true,
-      feature: true,
-      location: true,
-      contact: true,
-      images: true,
-    },
-  });
-  if (!property) return notFound();
+  // const property = await prisma.property.findUnique({
+  //   where: {
+  //     id: +params.id,
+  //   },
+  //   include: {
+  //     status: true,
+  //     feature: true,
+  //     location: true,
+  //     contact: true,
+  //     images: true,
+  //   },
+  // });
+  // if (!property) return notFound();
   return (
     <div>
       <PageTitle title="Property Page" href="/buy" linkCaption="Back to Properties" />
-      <div className="p-4">
+      {/* <div className="p-4">
         <h2 className="text-2xl font-bold text-primary my-5">{property.name}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="col-span-2">
@@ -57,7 +57,7 @@ const PropertyPage = async ({ params }: Props) => {
             <Attribute label="Phone" value={property.contact?.phone} />
           </Card>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
