@@ -39,12 +39,12 @@ const Header = () => {
         <nav className='hidden md:block'>
           <ul className="flex space-x-6 text-white">
             <li>
-              <Link href="#">
+              <Link href="/buy?filter=rent">
                 <p className="hover:text-gray-300">Rent</p>
               </Link>
             </li>
             <li>
-              <Link href="/buy">
+              <Link href="/buy?filter=buy">
                 <p className="hover:text-gray-300">Buy</p>
               </Link>
             </li>

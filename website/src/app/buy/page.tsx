@@ -4,6 +4,7 @@
 // import PropertyContainer from "@/components/template/PropertyContainer";
 import Search from "@/components/template/Search";
 import Header from "@/components/Header";
+import MapFilterItems from "@/components/MapFilterItems";
 const PAGE_SIZE = 8;
 
 interface Props {
@@ -66,6 +67,9 @@ export default async function Home({ searchParams }: Props) {
           <PropertyCard property={propertyItem} key={propertyItem.id} />
         ))}
       </PropertyContainer> */}
+        <div className='container mx-auto px-5 lg:px-10'>
+          {/* <MapFilterItems /> */}
+        </div>
     </div>
   );
 }
