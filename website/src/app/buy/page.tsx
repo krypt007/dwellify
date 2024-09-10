@@ -68,7 +68,7 @@ export default async function Home({ searchParams }: Props) {
         ))}
       </PropertyContainer> */}
         <div className='container mx-auto px-5 lg:px-10'>
-          {/* <MapFilterItems /> */}
+          <MapFilterItems />
         </div>
     </div>
   );
