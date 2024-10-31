@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
+import { Card, CardHeader, CardContent } from "./ui/card";
 import Image from "next/image";
 
 const ListingCard = ({ listing }) => (
