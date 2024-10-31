@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "title": "Modern Apartment in Downtown",
+        "location": "New York, NY",
+        "price": "3500",
+        "bedrooms": "2",
+        "type": "Apartment",
+        "image": "/images/1.jpg"
+    },
+    {
+        "id": "2",
+        "title": "Cozy Family House",
+        "location": "San Francisco, CA",
+        "price": "5000",
+        "bedrooms": "3",
+        "type": "House",
+        "image": "/images/2.jpg"
+    },
+    {
+        "id": "3",
+        "title": "Spacious Townhouse",
+        "location": "Austin, TX",
+        "price": "4200",
+        "bedrooms": "4",
+        "type": "Townhouse",
+        "image": "/images/3.jpg"
+    }
+]
